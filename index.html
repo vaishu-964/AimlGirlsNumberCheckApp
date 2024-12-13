@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            text-transform: uppercase;
+            font-size: 40px;
+        }
+button:hover{
+    cursor: pointer;
+    background-color: red;
+    color: yellow;
+    
+   
+}
+    </style>
+</head>
+
+<body>
+<h1>Develop by AIML First Year Girls Batch-B</h1>
+    <label>Number: </label>
+    <input type="text" id="d1" autocomplete="off">
+    <button type="button" onclick="isEven()">Even</button>
+    <button type="button" onclick="isPostive()">Postive</button>
+    <button type="button" onclick="isFactor()">Factor</button>
+    <button type="button" onclick="SumOfNatural_Number()">Sum of Natural Number</button>
+    <button type="button" onclick="isPrimeNumber()">Prime Number</button>
+
+    <label>Result</label>
+    <input type="text" id="res">
+
+
+    <script>
+        function isEven() {
+            let num = Number(document.getElementById("d1").value)
+            if (num % 2 == 0) {
+                document.getElementById("res").value = "Even Number"
+                // cout<<"Even Number"<<endl;
+
+            }
+            else {
+                document.getElementById("res").value = "Odd Number"
+
+            }
+        }
+
+        function isPostive() {
+            let num = Number(document.getElementById("d1").value)
+            if (num > 0) {
+                document.getElementById("res").value = "Positive Number"
+
+            }
+            else if (num < 0) {
+
+                document.getElementById("res").value = "Negative Number"
+
+            }
+            else {
+                document.getElementById("res").value = "Zero"
+
+
+            }
+        }
+        function isFactor() {
+            let num = Number(document.getElementById("d1").value)
+            let c = ""
+            for (let i = 1; i <= num; i++) {
+                if (num % i == 0)
+                    c = c + i + ","
+
+
+                // cout<<i<<endl;
+                // console.log(i)
+            }
+            document.getElementById("res").value = c
+        }
+        function SumOfNatural_Number(){
+
+        let num = Number(document.getElementById("d1").value)
+        if(num<0){
+            document.getElementById("res").value ="your number is not natural number "
+
+            
+        }
+        else{
+        let s = 0
+        for (let i = 1; i <= num; i++) {
+            s = s + i
+
+
+        }
+        document.getElementById("res").value = s
+    }
+}
+
+function isPrimeNumber(){
+    let num = Number(document.getElementById("d1").value)
+    if(num<0){
+        document.getElementById("res").value ="Not Prime  Number"
+
+    }
+    else{
+        let c=0
+        for(let i=1; i<=num;i++){
+            if(num%i==0){
+                c=c+1
+            }
+
+        }
+        if(c==2){
+            document.getElementById("res").value ="Prime  Number"
+
+        }
+        else{
+            document.getElementById("res").value ="Not Prime  Number"
+        }
+
+
+
+    }
+
+}
+
+
+
+
+    </script>
+
+</body>
+
+</html>
